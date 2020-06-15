@@ -1,0 +1,105 @@
+* {
+    font-family: 'Varela Round', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html ,body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    background: linear-gradient(45deg, #fd746c , #ff9068);
+    height: 100%;
+}
+
+.container .todo-app {
+    min-width: 380px;
+	max-width: 50%;
+	min-height: 480px;
+	max-height: 100%;
+	background: #fafafa;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
+	padding: 3rem;
+}
+
+.todo-app .todo-title {
+	margin-bottom: auto;
+    margin-top: 0;
+    font-size: 250%;
+	line-height: 1;
+}
+
+.todo-app .todo-add {
+    width: 100%;
+}
+
+.todo-app .todo-list {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: auto;
+    margin: 10% 0% 10% 0%;
+}
+
+.todo-app .todo-list ul{
+    list-style-type: none;
+}
+
+.todo-app .todo-list ul li {
+    padding: 5% 0% 5% 0%;
+}
+
+.todo-app .todo-list ul li .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5% 2% 4%;
+    cursor: pointer;
+}
+.todo-app .todo-list ul li .content {
+    padding-right: 6%;
+}
+.todo-app .todo-list ul li .content .delete a:hover {
+    color: tomato;
+}
+
+.todo-app .todo-add form {
+    display: flex;
+}
+.todo-app .todo-add input{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    background: rgb(230, 229, 229);
+    border: 2px solid rgb(230, 229, 229);
+    box-sizing: border-box;
+    float: left;
+    border-radius: 10px;
+    padding: 1% 5% 1% 3%;
+    outline: none;
+    text-indent: 2%;
+    transition: all 0.5s ease-out;
+}
+.todo-app .todo-add input:focus {
+    background: #fafafa;
+    font-size: 105%;
+}
+
+.todo-app .todo-add #add-btn {
+    width: 30%;
+    margin: 0% 2% 0% 2%;
+    font-size: 120%;
+    color: white;
+    border: none;
+    background-color: rgb(74, 207, 108);
+}
