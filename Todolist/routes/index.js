@@ -1,6 +1,3 @@
-
-
-
 module.exports = {
     getHomePage: (req, res) => {
         let query = 'SELECT * FROM todos';
