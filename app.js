@@ -1,8 +1,7 @@
-var express = require('express');
-var app = express();
-var path = require('path');
-var bodyParser = require('body-parser');
-var mysql = require('mysql');
+const express = require('express');
+const app = express();
+const path = require('path');
+const mysql = require('mysql');
 
 const { getHomePage, addTask, deleteTask } = require('./routes');
 
@@ -30,8 +29,8 @@ app.set('views engine', 'ejs');
 app.use(express.static(
     path.join(__dirname, 'public')
 ));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.get('/', getHomePage);
 app.post('/add', addTask);
