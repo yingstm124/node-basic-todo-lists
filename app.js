@@ -6,10 +6,10 @@ const mysql = require('mysql');
 const { getHomePage, addTask, deleteTask } = require('./routes');
 
 const db = mysql.createConnection( {
-    host: 'localhost',
-    user: 'root',
-    password: '27365410',
-    database: 'Todolist'
+    host: 'us-cdbr-east-02.cleardb.com',
+    user: 'ba5539d1f9e0b3',
+    password: '1648c7b2',
+    database: 'heroku_ebdbe8b17c62de8'
 });
 
 db.connect((err) => {
@@ -22,7 +22,7 @@ db.connect((err) => {
 
 global.db = db;
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('views engine', 'ejs');
